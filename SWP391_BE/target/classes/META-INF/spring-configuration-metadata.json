@@ -2,15 +2,15 @@
   "groups": [
     {
       "name": "file",
-      "type": "org.example.config.FileStorageProperties",
-      "sourceType": "org.example.config.FileStorageProperties"
+      "type": "com.courses.server.config.FileStorageProperties",
+      "sourceType": "com.courses.server.config.FileStorageProperties"
     }
   ],
   "properties": [
     {
       "name": "file.upload-dir",
       "type": "java.lang.String",
-      "sourceType": "org.example.config.FileStorageProperties"
+      "sourceType": "com.courses.server.config.FileStorageProperties"
     }
   ],
   "hints": []

@@ -17,7 +17,7 @@ public class UserPackage extends BaseDomain{
 
     @ManyToOne
     @JoinColumn(name = "package_id", referencedColumnName = "id")
-    private Package aPackage;
+    private java.lang.Package aPackage;
 
     @ManyToOne
     @JoinColumn(name = "order_id", referencedColumnName = "id")

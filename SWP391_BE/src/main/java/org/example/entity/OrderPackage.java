@@ -19,7 +19,7 @@ public class OrderPackage extends BaseDomain{
 
     @OneToOne
     @JoinColumn(name = "package_id", referencedColumnName = "id")
-    private Package _package;
+    private java.lang.Package _package;
 
     @OneToOne
     @JoinColumn(name = "combo_id", referencedColumnName = "id")

@@ -20,7 +20,7 @@ public class Feedback extends BaseDomain{
 
     @ManyToOne
     @JoinColumn(name = "package_id", referencedColumnName = "id")
-    private Package aPackage;
+    private java.lang.Package aPackage;
 
     @ManyToOne
     @JoinColumn(name = "combo_id", referencedColumnName = "id")
