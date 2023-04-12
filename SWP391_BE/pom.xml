@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.courses</groupId>
-    <artifactId>server</artifactId>
+    <artifactId>SWP391_BE</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>server</name>
     <description>Project Online Learning Platform Design</description>
