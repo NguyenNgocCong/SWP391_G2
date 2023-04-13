@@ -71,41 +71,41 @@ public class AuthController {
         return TemplateSendMail.getSuccess("https://lms.nextin.com.vn/login");
     }
 
-//    @PostMapping("/forgot-password")
-//    public ResponseEntity<?> processForgotPassword(HttpServletRequest request,
-//                                                   @RequestBody Map<String, String> forgot){
-//        String token = RandomString.make(30);
-//
-//        String email = forgot.get("email");
-//
-//        userService.updateResetPasswordToken(token, email);
-//        String resetPasswordLink = "https://lms.nextin.com.vn/reset-password/" + token;
-//
-//        String subject = "Here's the link to reset your password";
-//
-//        String content = TemplateSendMail.getContent(resetPasswordLink, "Reset Password", "You are asking for a password reset.");
-//
-//        senderService.sendEmail(email, subject, content);
-//
-//        return ResponseEntity.ok(new MessageResponse("Gửi yêu cầu quên mật khẩu thành công, vui lòng check email của bạn!!!"));
-//    }
+    @PostMapping("/forgot-password")
+    public ResponseEntity<?> processForgotPassword(HttpServletRequest request,
+                                                   @RequestBody Map<String, String> forgot){
+        String token = RandomString.make(30);
 
-//    @PostMapping("/reset-password")
-//    public ResponseEntity<?> processResetPassword(HttpServletRequest request,
-//                                                  @RequestParam("token") String token,
-//                                                  @RequestBody Map<String, String> forgot) {
-//
-//        System.out.println(token);
-//        User user = userService.getByResetPasswordToken(token);
-//        String password = forgot.get("password");
-//        System.out.println(password);
-//        if (user == null) {
-//            throw new BadRequestException(1402, "Sai mã token");
-//        }
-//        userService.updatePassword(user, password);
-//
-//        return ResponseEntity.ok(new MessageResponse("Đặt lại mật khẩu thành công"));
-//    }
+        String email = forgot.get("email");
+
+        userService.updateResetPasswordToken(token, email);
+        String resetPasswordLink = "https://lms.nextin.com.vn/reset-password/" + token;
+
+        String subject = "Here's the link to reset your password";
+
+        String content = TemplateSendMail.getContent(resetPasswordLink, "Reset Password", "You are asking for a password reset.");
+
+        senderService.sendEmail(email, subject, content);
+
+        return ResponseEntity.ok(new MessageResponse("Gửi yêu cầu quên mật khẩu thành công, vui lòng check email của bạn!!!"));
+    }
+
+    @PostMapping("/reset-password")
+    public ResponseEntity<?> processResetPassword(HttpServletRequest request,
+                                                  @RequestParam("token") String token,
+                                                  @RequestBody Map<String, String> forgot) {
+
+        System.out.println(token);
+        User user = userService.getByResetPasswordToken(token);
+        String password = forgot.get("password");
+        System.out.println(password);
+        if (user == null) {
+            throw new BadRequestException(1402, "Sai mã token");
+        }
+        userService.updatePassword(user, password);
+
+        return ResponseEntity.ok(new MessageResponse("Đặt lại mật khẩu thành công"));
+    }
 
 }
 
