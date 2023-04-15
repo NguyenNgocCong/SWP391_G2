@@ -40,9 +40,6 @@ function Trainee(props) {
                     </Nav>
                   </div>
                   <div className="tab-content">
-                    <Tab.Pane eventKey="1">
-                      <TraineeOffline activeTab={active} />
-                    </Tab.Pane>
                     <Tab.Pane eventKey="2">
                       <TraineeOnline activeTab={active} />
                     </Tab.Pane>
