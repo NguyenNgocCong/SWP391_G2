@@ -44,7 +44,7 @@ public class User extends BaseDomain{
     @JoinColumn(name = "role_id", referencedColumnName = "setting_id")
     private Setting role;
 
-    public User(String email, String username, String password,String phone, boolean active) {
+    public User(String email, String username, String password, String phone, boolean active) {
         this.email = email;
         this.username = username;
         this.password = password;

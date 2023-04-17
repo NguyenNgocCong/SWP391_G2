@@ -1,6 +1,5 @@
 package org.example.dto.response;
 
-import org.example.entity.User;
 import lombok.Getter;
 import lombok.Setter;
 
