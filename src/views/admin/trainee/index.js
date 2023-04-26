@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Nav, Tab } from "react-bootstrap";
 import { AppFooter, AppHeader, AppSidebar } from "../component";
+import TraineeOffline from "./offline/trainee";
 import TraineeOnline from "./online/trainee";
 import { Toaster } from "react-hot-toast";
 
@@ -40,6 +41,9 @@ function Trainee(props) {
                     </Nav>
                   </div>
                   <div className="tab-content">
+                    <Tab.Pane eventKey="1">
+                      <TraineeOffline activeTab={active} />
+                    </Tab.Pane>
                     <Tab.Pane eventKey="2">
                       <TraineeOnline activeTab={active} />
                     </Tab.Pane>

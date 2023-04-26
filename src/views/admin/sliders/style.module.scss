@@ -71,7 +71,15 @@
     padding: 5px;
     color: #969a9e;
   }
-  
+  .dropzoneContainer {
+    height: 300;
+    background-color: #efefef;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-style: dashed;
+    border-color: #aaa;
+  }
   div[data-column-id="1"] {
     overflow: visible!important;
   }
