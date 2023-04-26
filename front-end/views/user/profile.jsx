@@ -4,7 +4,19 @@ import { Nav, Tab } from "react-bootstrap";
 
 // Layout
 import Header from "../home/layout/header/header";
-
+import MyCart from "./element/my-cart";
+import EditProfile from "./element/edit-profile";
+import ChangePassword from "./element/change-password";
+import bannerImg from "../../images/banner/banner1.jpg";
+import avatarProfile from "../../images/icon/avatar.svg";
+import { userApi } from "../../api/userApi";
+import { combieImg } from "../../utils";
+import MyOrderProfile from "./element/my-order-profile";
+import MyOrderCancel from "./element/my-order-cancel";
+import MyOrderProcess from "./element/my-order-process";
+import MyClass from "./element/my-class";
+import MyCourses from "./element/my-courses";
+import { useSelector } from "react-redux";
 
 function Profile(props) {
   const { isLogin } = useSelector((state) => state.auth);

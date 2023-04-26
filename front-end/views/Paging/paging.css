@@ -1,0 +1,31 @@
+.paging-question-item {
+  display: inline-block;
+  min-width: 32px;
+  height: 32px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  line-height: 30px;
+  text-align: center;
+  vertical-align: middle;
+  list-style: none;
+  background-color: #fff;
+  border: 1px solid #d9d9d9;
+  border-radius: 2px;
+  outline: 0;
+  cursor: pointer;
+  user-select: none;
+}
+.paging-question-detail {
+  display: block;
+  padding: 0 6px;
+  color: rgba(0, 0, 0, 0.85);
+  transition: none;
+}
+.paging-question-current-selectes {
+  font-weight: 500;
+  background: #fff;
+  border-color: #1890ff;
+}
+.paging-question-current-selectes .paging-question-detail {
+  color: #1890ff;
+}
