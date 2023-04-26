@@ -1,0 +1,6 @@
+.wrapper {
+  width: 100%;
+  padding-left: var(--cui-sidebar-occupy-start);
+  will-change: auto;
+  // @include transition(padding .15s);
+}
